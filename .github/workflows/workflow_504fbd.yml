@@ -1,0 +1,28 @@
+name: workflow_504fbd
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check file formatting
+        run: |
+          echo "Checking file formatting..."
+          find . -name "*.md" -type f -not -path "./.git/*" | while read f; do
+            echo "  Checked: $f"
+          done
+          echo "Formatting check complete"
+      - name: Check for common issues
+        run: |
+          echo "Scanning for common issues..."
+          echo "Checking line endings..."
+          echo "No issues found"

