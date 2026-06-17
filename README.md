@@ -1,4 +1,4 @@
-# cli-tool-46cdf3
+# cli-tool-e3e890
 
 A Java 17 CLI tool using built-in argument parsing.
 
@@ -6,10 +6,10 @@ A Java 17 CLI tool using built-in argument parsing.
 
 ```bash
 mvn package
-java -jar target/cli-tool-46cdf3-1.0.0.jar run my-target --output ./out
-java -jar target/cli-tool-46cdf3-1.0.0.jar status
+java -jar target/cli-tool-e3e890-1.0.0.jar run my-target --output ./out
+java -jar target/cli-tool-e3e890-1.0.0.jar status
 ```
 
 ## Project ID
 
-`46cdf3`
+`e3e890`

